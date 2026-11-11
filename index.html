@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxe Glow Salon - Book & Pay Deposit | Nairobi</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#fff5f8;color:#222;padding-bottom:30px}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,0.96);display:flex;justify-content:space-between;align-items:center;padding:12px 16px;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+header b{font-size:20px;color:#d81b60}
+header b span{color:#111}
+header a{background:#111;color:#fff;padding:8px 14px;border-radius:20px;font-size:13px;font-weight:bold}
+.hero{background:linear-gradient(rgba(0,0,0,0.35),rgba(216,27,96,0.65)),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80') center/cover;color:white;padding:45px 20px 30px;text-align:center;border-radius:0 0 28px 28px}
+.hero h1{font-size:34px;line-height:1.05}
+.hero p{margin:10px 0 16px;opacity:0.95}
+.hero-btn{background:white;color:#111;padding:12px 22px;border-radius:25px;font-weight:bold;display:inline-block}
+.badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px}
+.badges span{background:rgba(255,255,255,0.25);padding:6px 12px;border-radius:20px;font-size:12px}
+.wrap{max-width:1050px;margin:auto;padding:16px}
+h2{font-size:22px;margin:22px 0 6px}
+.sub{color:#888;font-size:14px;margin-bottom:12px}
+.pills{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px}
+.pills button{white-space:nowrap;background:white;border:1px solid #ffd1e0;padding:9px 16px;border-radius:20px;cursor:pointer}
+.pills button.active{background:#d81b60;color:white;border-color:#d81b60}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(min-width:750px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.08);border:1px solid #fff0f4}
+.card img{width:100%;height:180px;object-fit:cover}
+.card-body{padding:13px}
+.card-body b{font-size:16px}
+.card-body p{font-size:13px;color:#777;margin:5px 0}
+.price-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.price{font-weight:bold;color:#d81b60;font-size:16px}
+.deposit{font-size:11px;background:#fff0f4;color:#d81b60;padding:4px 8px;border-radius:10px}
+.book-btn{width:100%;margin-top:10px;background:#111;color:white;border:none;padding:11px;border-radius:12px;font-weight:bold;cursor:pointer}
+.book-btn:hover{background:#d81b60}
+/* WIGS */
+.wig-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(min-width:750px){.wig-grid{grid-template-columns:repeat(4,1fr)}}
+.wig{border-radius:20px;overflow:hidden;position:relative;height:220px;background-size:cover;background-position:center;color:white;display:flex;align-items:flex-end;padding:14px}
+.wig div{text-shadow:0 2px 10px rgba(0,0,0,0.8)}
+.wig b{font-size:16px}
+.wig p{font-size:12px;opacity:0.9}
+/* HOW IT WORKS */
+.steps{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:700px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{background:white;padding:16px;border-radius:18px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
+.step div{font-size:28px}
+.step b{display:block;margin:6px 0 4px}
+/* BOOKING FORM */
+.booking{background:white;border-radius:24px;padding:20px;box-shadow:0 15px 35px rgba(0,0,0,0.1);margin-top:10px;border:2px solid #ffd1e0}
+.booking label{font-size:13px;font-weight:bold;display:block;margin:12px 0 5px}
+.booking input,.booking select{width:100%;padding:13px;border:1px solid #ddd;border-radius:12px;outline:none;font-size:15px}
+.booking input:focus{border-color:#d81b60}
+.summary{background:#fff0f4;border-radius:14px;padding:14px;margin-top:14px}
+.summary-row{display:flex;justify-content:space-between;padding:5px 0;font-size:14px}
+.summary-row.total{font-weight:bold;font-size:17px;border-top:1px dashed #ffb3c9;padding-top:10px;margin-top:6px}
+.pay-box{background:#111;color:white;border-radius:16px;padding:16px;margin-top:14px}
+.pay-box h3{color:#7CFC9A}
+.pay-box ol{margin:10px 0 10px 18px;font-size:14px;line-height:1.6}
+.pay-box code{background:#222;padding:3px 8px;border-radius:6px;color:#7CFC9A;font-size:15px}
+.copy-btn{background:#25D366;color:white;border:none;padding:10px 16px;border-radius:20px;font-weight:bold;cursor:pointer;width:100%;margin-top:8px}
+.wa-btn{background:#25D366;color:white;border:none;padding:14px;border-radius:14px;font-weight:bold;cursor:pointer;width:100%;margin-top:10px;font-size:16px}
+.note{font-size:12px;color:#888;text-align:center;margin-top:10px}
+.reviews{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:700px){.reviews{grid-template-columns:repeat(3,1fr)}}
+.review{background:white;padding:16px;border-radius:18px;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
+.review img{width:45px;height:45px;border-radius:50%;object-fit:cover}
+.footer{text-align:center;padding:25px 10px;color:#888;font-size:13px}
+/* POPUP */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:100;align-items:center;justify-content:center;padding:16px}
+.modal.show{display:flex}
+.modal-box{background:white;border-radius:22px;padding:22px;max-width:430px;width:100%;max-height:90vh;overflow:auto}
+</style>
+</head>
+<body>
+
+<header><b>Luxe Glow <span>Salon</span></b><a href="#booking">Book Now →</a></header>
+
+<div class="hero">
+<p style="font-size:13px;letter-spacing:2px">NAIROBI • WESTLANDS • WALK-INS WELCOME</p>
+<h1>Look Stunning.<br>Feel Confident.</h1>
+<p>Book hair, wigs & nails in 1 minute. Pay only <b>50% deposit</b> to secure your slot.</p>
+<a class="hero-btn" href="#booking">Book My Slot 💖</a>
+<div class="badges"><span>⭐ 4.9 (1,240 reviews)</span><span>📍 Nairobi</span><span>💳 M-Pesa Accepted</span></div>
+</div>
+
+<div class="wrap">
+
+<h2>✨ How Booking Works</h2>
+<p class="sub">No full payment upfront. Just half deposit.</p>
+<div class="steps">
+<div class="step"><div>1️⃣</div><b>Choose Service</b><p style="font-size:13px;color:#777">Pick your style below</p></div>
+<div class="step"><div>2️⃣</div><b>Pick Date & Time</b><p style="font-size:13px;color:#777">Choose when you want to come</p></div>
+<div class="step"><div>3️⃣</div><b>Pay 50% on M-Pesa</b><p style="font-size:13px;color:#777">Send deposit to 0118431854</p></div>
+<div class="step"><div>4️⃣</div><b>Send Code on WhatsApp</b><p style="font-size:13px;color:#777">We confirm your slot instantly</p></div>
+</div>
+
+<h2>💇 Hair & Braids Services</h2>
+<p class="sub">Suggested prices — includes wash & styling where noted</p>
+<div class="pills" id="pills">
+<button class="active" onclick="filterCat('all',this)">All</button>
+<button onclick="filterCat('braids',this)">Braids</button>
+<button onclick="filterCat('hair',this)">Hair</button>
+<button onclick="filterCat('nails',this)">Nails</button>
+<button onclick="filterCat('makeup',this)">Makeup & Facial</button>
+<button onclick="filterCat('wigs',this)">Wigs</button>
+</div>
+<div class="grid" id="serviceGrid"></div>
+
+<h2>👑 Real Wigs Collection - In Stock</h2>
+<p class="sub">Tap a wig to book install + wig. All 100% human hair.</p>
+<div class="wig-grid">
+<div class="wig" style="background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.75)),url('https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=800&q=80')" onclick="selectService('Body Wave Wig 22\"',8500)"><div><b>Body Wave 22"</b><p>Ksh 8,500 • Deposit Ksh 4,250</p><p>⭐ 5.0 • 120 sold</p></div></div>
+<div class="wig" style="background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.75)),url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80')" onclick="selectService('Straight Wig 24\"',9500)"><div><b>Straight 24"</b><p>Ksh 9,500 • Deposit Ksh 4,750</p><p>⭐ 4.9 • 98 sold</p></div></div>
+<div class="wig" style="background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.75)),url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80')" onclick="selectService('Curly Wig 20\"',7800)"><div><b>Curly 20"</b><p>Ksh 7,800 • Deposit Ksh 3,900</p><p>⭐ 4.9 • 85 sold</p></div></div>
+<div class="wig" style="background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.75)),url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800&q=80')" onclick="selectService('Bob Wig 12\"',5500)"><div><b>Bob Wig 12"</b><p>Ksh 5,500 • Deposit Ksh 2,750</p><p>⭐ 5.0 • 210 sold</p></div></div>
+</div>
+
+<h2 id="booking">📅 Book & Pay 50% Deposit</h2>
+<div class="booking">
+<label>1. Choose Service</label>
+<select id="serviceSelect" onchange="updateSummary()"></select>
+
+<label>2. Your Full Name</label>
+<input id="custName" placeholder="e.g. Faith Wanjiru">
+
+<label>3. Your Phone Number</label>
+<input id="custPhone" placeholder="e.g. 0712345678">
+
+<label>4. Pick Date</label>
+<input type="date" id="bookDate">
+
+<label>5. Pick Time</label>
+<select id="bookTime">
+<option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>01:00 PM</option><option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option><option>05:00 PM</option>
+</select>
+
+<div class="summary">
+<div class="summary-row"><span>Service:</span><b id="sumService">-</b></div>
+<div class="summary-row"><span>Total Price:</span><b id="sumTotal">Ksh 0</b></div>
+<div class="summary-row"><span>Pay Now (50% Deposit):</span><b id="sumDeposit" style="color:#d81b60">Ksh 0</b></div>
+<div class="summary-row total"><span>Pay at Salon (Balance):</span><span id="sumBalance">Ksh 0</span></div>
+</div>
+
+<div class="pay-box">
+<h3>💚 STEP 1: Pay Deposit via M-Pesa</h3>
+<ol>
+<li>Go to <b>M-Pesa → Send Money</b></li>
+<li>Enter Number: <code>0118431854</code></li>
+<li>Enter Amount: <code id="mpesaAmount">Ksh 0</code></li>
+<li>Enter M-Pesa PIN & Send</li>
+<li>Copy the M-Pesa Code e.g. <code>QK123ABC45</code></li>
+</ol>
+<button class="copy-btn" onclick="copyNumber()">📋 Copy Number 0118431854</button>
+<label style="color:white;margin-top:14px">STEP 2: Enter Your M-Pesa Code Here</label>
+<input id="mpesaCode" placeholder="e.g. QK7X123ABC" style="background:white">
+</div>
+
+<button class="wa-btn" onclick="confirmBooking()">✅ I Have Paid - Confirm on WhatsApp →</button>
+<p class="note">By booking you agree: Deposit is non-refundable if you cancel less than 12 hours before appointment. Balance paid at salon.</p>
+</div>
+
+<h2>⭐ What Our Clients Say</h2>
+<div class="reviews">
+<div class="review"><div style="display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"><div><b>Mary K.</b><br><small>⭐⭐⭐⭐⭐ Knotless Braids</small></div></div><p style="margin-top:10px;font-size:14px">"Paid deposit on M-Pesa, my slot was ready when I arrived. No waiting. Best salon in Nairobi!"</p></div>
+<div class="review"><div style="display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"><div><b>Sharon A.</b><br><small>⭐⭐⭐⭐⭐ Wig Install</small></div></div><p style="margin-top:10px;font-size:14px">"Bought Body Wave 22 inch. The wig is so soft and install was perfect. I get compliments daily."</p></div>
+<div class="review"><div style="display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80"><div><b>Faith N.</b><br><small>⭐⭐⭐⭐⭐ Nails + Makeup</small></div></div><p style="margin-top:10px;font-size:14px">"Booked for my birthday glam. Paid half first, balance after. Very professional and clean salon."</p></div>
+</div>
+</div>
+
+<div class="footer">
+<b style="color:#111">Luxe Glow Salon</b><br>
+📍 Westlands, Nairobi • 📞 0118431854 • 💬 WhatsApp: 0118431854<br>
+Open: Mon - Sat 8am - 8pm • Sun 10am - 6pm<br>
+© 2026 Luxe Glow Salon
+</div>
+
+<!-- SUCCESS POPUP -->
+<div class="modal" id="successModal">
+<div class="modal-box" style="text-align:center">
+<div style="font-size:50px">🎉</div>
+<h2>Deposit Details Ready!</h2>
+<p id="successText" style="font-size:14px;line-height:1.6;color:#555"></p>
+<button class="wa-btn" onclick="sendWhatsApp()">Open WhatsApp to Confirm →</button>
+<button onclick="closeModal()" style="background:none;border:none;margin-top:10px;color:#888;cursor:pointer">Close</button>
+</div>
+</div>
+
+<script>
+let services=[
+{cat:'braids',name:'Knotless Braids - Medium',desc:'Neat, painless • 4-5 weeks • Wash included',price:1500,img:'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80'},
+{cat:'braids',name:'Knotless Braids - Jumbo',desc:'Quick install • 3-4 weeks',price:1200,img:'https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80'},
+{cat:'braids',name:'Stitch Braids',desc:'Cornrows + Stitch design',price:1000,img:'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80'},
+{cat:'braids',name:'Boho Braids',desc:'Braids + Curls • Trendy',price:1800,img:'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80'},
+{cat:'hair',name:'Silk Press',desc:'Wash + Treatment + Press',price:1200,img:'https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600&q=80'},
+{cat:'hair',name:'Dreadlocks Starter',desc:'Starter Locs + Twist',price:1500,img:'https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=600&q=80'},
+{cat:'hair',name:'Dreadlocks Retouch',desc:'Retouch + Styling',price:1000,img:'https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=600&q=80'},
+{cat:'hair',name:'Hair Treatment + Blowout',desc:'Deep treatment + Blow dry',price:800,img:'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80'},
+{cat:'wigs',name:'Wig Install - Frontal',desc:'Frontal / Closure install + Styling',price:1800,img:'https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=600&q=80'},
+{cat:'wigs',name:'Wig Revamp + Install',desc:'Wash + Revamp + Install',price:2000,img:'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80'},
+{cat:'wigs',name:'Body Wave Wig 22"',desc:'100% Human Hair • In Stock',price:8500,img:'https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=600&q=80'},
+{cat:'wigs',name:'Bob Wig 12"',desc:'100% Human Hair • In Stock',price:5500,img:'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80'},
+{cat:'nails',name:'Acrylic Nails + Art',desc:'Acrylic + Gel + Nail Art',price:1000,img:'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80'},
+{cat:'nails',name:'Gel Manicure + Pedicure',desc:'Gel + Manicure + Pedicure',price:1300,img:'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80'},
+{cat:'makeup',name:'Soft Glam Makeup',desc:'Daily / Event Glam',price:2500,img:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80'},
+{cat:'makeup',name:'Bridal Makeup Package',desc:'Makeup + Lashes + Touch-up',price:5000,img:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80'},
+{cat:'makeup',name:'Facial + Skin Glow',desc:'Deep cleanse + Mask + Massage',price:1500,img:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80'},
+];
+let sel = document.getElementById('serviceSelect');
+sel.innerHTML = services.map(s=>`<option value="${s.name}|${s.price}">${s.name} - Ksh ${s.price.toLocaleString()}</option>`).join('');
+function render(list){
+document.getElementById('serviceGrid').innerHTML = list.map(s=>`
+<div class="card"><img src="${s.img}"><div class="card-body"><b>${s.name}</b><p>${s.desc}</p><div class="price-row"><span class="price">Ksh ${s.price.toLocaleString()}</span><span class="deposit">Deposit Ksh ${(s.price/2).toLocaleString()}</span></div><button class="book-btn" onclick="selectService('${s.name}',${s.price})">Book This → Pay Half</button></div></div>`).join('');
+}
+render(services);
+function filterCat(cat,btn){
+document.querySelectorAll('#pills button').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+render(cat==='all'? services : services.filter(s=>s.cat===cat));
+}
+function selectService(name,price){
+sel.value = name+'|'+price;
+updateSummary();
+document.getElementById('booking').scrollIntoView({behavior:'smooth'});
+}
+function updateSummary(){
+let [name,price] = sel.value.split('|'); price=Number(price);
+let dep = Math.round(price/2); let bal = price-dep;
+document.getElementById('sumService').innerText=name;
+document.getElementById('sumTotal').innerText='Ksh '+price.toLocaleString();
+document.getElementById('sumDeposit').innerText='Ksh '+dep.toLocaleString();
+document.getElementById('sumBalance').innerText='Ksh '+bal.toLocaleString();
+document.getElementById('mpesaAmount').innerText='Ksh '+dep.toLocaleString();
+}
+updateSummary();
+function copyNumber(){
+navigator.clipboard.writeText('0118431854');
+alert('Copied: 0118431854 - Paste in M-Pesa Send Money');
+}
+let lastMsg='';
+function confirmBooking(){
+let name=document.getElementById('custName').value.trim();
+let phone=document.getElementById('custPhone').value.trim();
+let date=document.getElementById('bookDate').value;
+let time=document.getElementById('bookTime').value;
+let code=document.getElementById('mpesaCode').value.trim().toUpperCase();
+let [sName,sPrice]=sel.value.split('|'); sPrice=Number(sPrice); let dep=Math.round(sPrice/2); let bal=sPrice-dep;
+if(!name||!phone||!date){alert('Please fill Name, Phone and Date');return}
+if(!code){alert('Please enter your M-Pesa Code after paying deposit. If you have not paid yet, pay to 0118431854 first.');return}
+lastMsg = `Hi Luxe Glow Salon! 💖%0A%0AI want to CONFIRM my booking:%0A%0A👤 Name: ${encodeURIComponent(name)}%0A📞 Phone: ${encodeURIComponent(phone)}%0A💇 Service: ${encodeURIComponent(sName)}%0A📅 Date: ${date}%0A⏰ Time: ${encodeURIComponent(time)}%0A💰 Total: Ksh ${sPrice.toLocaleString()}%0A💚 Deposit Paid: Ksh ${dep.toLocaleString()}%0A💳 M-Pesa Code: ${encodeURIComponent(code)}%0A💰 Balance to Pay at Salon: Ksh ${bal.toLocaleString()}%0A%0APlease confirm my slot. Thank you!`;
+document.getElementById('successText').innerHTML = `Service: <b>${sName}</b><br>Date: <b>${date} at ${time}</b><br>Deposit: <b>Ksh ${dep.toLocaleString()}</b> to <b>0118431854</b><br>M-Pesa Code: <b>${code}</b><br><br>Tap below to send this to us on WhatsApp. We will reply "Confirmed ✅" within 5 minutes.`;
+document.getElementById('successModal').classList.add('show');
+}
+function sendWhatsApp(){
+window.open('https://wa.me/254118431854?text='+lastMsg,'_blank');
+}
+function closeModal(){document.getElementById('successModal').classList.remove('show')}
+// set min date to today
+document.getElementById('bookDate').min = new Date().toISOString().split('T')[0];
+</script>
+</body>
+</html>
